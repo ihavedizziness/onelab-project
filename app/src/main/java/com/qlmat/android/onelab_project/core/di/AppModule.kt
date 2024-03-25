@@ -7,6 +7,7 @@ import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFact
 import com.qlmat.android.onelab_project.BuildConfig
 import com.qlmat.android.onelab_project.core.NetworkChecker
 import com.qlmat.android.onelab_project.core.interceptor.QueryInterceptor
+import com.qlmat.android.onelab_project.core.notification.CustomNotificationManager
 import com.qlmat.android.onelab_project.data.DATABASE_NAME_MOVIES
 import com.qlmat.android.onelab_project.data.api.MoviesApi
 import com.qlmat.android.onelab_project.data.local.FavoritesDao
@@ -112,6 +113,15 @@ class AppModule {
         return FavoriteMoviesRepositoryImpl(
             favoritesDao = favoritesDao
         )
+    }
+
+    @Provides
+    @Singleton
+    fun provideCustomNotificationManager(
+        @ApplicationContext context: Context,
+        notificationManager: NotificationManager
+    ): CustomNotificationManager {
+        return CustomNotificationManager(context, notificationManager)
     }
 
 //    @Provides

@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">onelab-project</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="menuHome">Home</string>
     <string name="menuFavorites">Favorites</string>
+
+    <string name="notification_channel_name">123</string>
+    <string name="notification_channel_description">MyChannelDescription</string>
 </resources>
