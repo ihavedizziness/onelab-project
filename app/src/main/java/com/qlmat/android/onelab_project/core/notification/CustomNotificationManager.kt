@@ -27,10 +27,10 @@ class CustomNotificationManager @Inject constructor(
             notification = notification,
             pendingIntent = pendingIntent
         )
-        notificationManager.notify(
-            System.currentTimeMillis().toInt(),
-            notification
-        )
+//        notificationManager.notify(
+//            System.currentTimeMillis().toInt(),
+//            notification
+//        )
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
